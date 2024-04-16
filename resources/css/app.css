@@ -1,0 +1,27 @@
+/* Reset and Normalize */
+@import url("path/to/normalize.css");
+
+/* Global Application Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    /* Button styles */
+}
+
+/* Import Other Styles (Optional) */
+@import "components/navbar.css";
+@import "pages/home.css";
