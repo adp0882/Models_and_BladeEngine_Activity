@@ -2,14 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
-Route::get('/', function () {
-    return view('layouts');
 
+/* Route to display a list of all books */
+Route::get('/books', [BookController::class, 'index'])->name('books.index');
 
-
-/*Route::prefix('/books')->group(function () {
-    Route::resource('', BookController::class);  // Use resource routes for CRUD operations
-*/
-    // Additional named routes for specific actions if needed
-    Route::get('/search', [BookController::class, 'search'])->name('books.search');
-});
+/* Route to display a specific book by its ID */
+Route::get('/books/{book}', [BookController::class, 'show'])->name('books.show');
